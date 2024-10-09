@@ -55,17 +55,17 @@ const Schedule = () => {
       <div className="mt-5 space-y-4">
         {filteredSchedule.map((item, index) => (
           <div key={index}>
-            {/* Waktu Siaran */}
-            <div className="bg-Gainsboro/5 text-white px-[4%] md:px-[1%] h-9 flex items-center rounded-md">
-              {/* Menambahkan `rounded-md` untuk memperhalus sudut */}
+            {/* Waktu Siaran dengan sudut atas lancip dan sudut bawah lancip */}
+            <div className="bg-Gainsboro/5 text-white px-[4%] md:px-[1%] h-9 flex items-center rounded-t-md">
+              {/* Sudut atas lancip, sudut bawah lancip */}
               <p>
                 {item.startTime} WIB - {item.endTime} WIB
               </p>
             </div>
 
-            {/* Detail Program */}
-            <div className="flex items-center gap-3 bg-[#2A2A2A] p-3 rounded-md min-h-18">
-              {/* Menambahkan `rounded-md` ke seluruh card */}
+            {/* Detail Program dengan sudut atas lancip dan sudut bawah rounded */}
+            <div className="flex items-center gap-3 bg-[#2A2A2A] p-3 rounded-b-md min-h-18">
+              {/* Sudut card tetap lancip */}
               <img
                 src={bgBanner}
                 alt={item.title}

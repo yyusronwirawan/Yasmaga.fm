@@ -13,8 +13,7 @@ const BottomBar = () => {
   const [mute, setMute] = useState(true);
   const [volume, setVolume] = useState(0);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleVolumeChange = (e: any) => {
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = Number(e.target.value);
     setVolume(newVolume);
     setMute(newVolume === 0);
@@ -40,7 +39,13 @@ const BottomBar = () => {
           <div className="w-10 rounded-[4px] overflow-hidden">
             <img src={logoFM} alt="" />
           </div>
-          <p className="text-xs text-white">Radio Yasmaga 96.9 FM (Ponorogo)</p>
+          <div className="flex flex-col">
+            <p className="text-xs text-white">Radio Yasmaga 96.9 FM (Ponorogo)</p>
+            <div className="flex items-center text-red-500 text-xs">
+              <GoDotFill />
+              <p>Live</p>
+            </div>
+          </div>
         </div>
         <div
           onClick={play}
