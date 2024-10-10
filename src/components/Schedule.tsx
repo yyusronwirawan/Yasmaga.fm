@@ -5,25 +5,25 @@ import { day, schedule } from "../utils/dummyData";
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(day[0]);
-  const filteredSchedule = schedule.filter((item) => item.day === selectedDay);
+  const filteredSchedule = schedule.filter((item) =>  item.day === selectedDay);
 
   return (
     <div className="bg-[#202020] px-[5%] pt-5 pb-20">
       {/* Header */}
       <h1 className="capitalize font-bold text-lg text-white mb-4">
-        Radio Yasmaga 96.9 FM
+        Radio Yasmaga 96.90 FM Mhz
       </h1>
 
       {/* Bagian Profil */}
       <div className="flex items-center gap-5 text-white mb-6">
         <img
           src={bgBanner}
-          alt="Radio Yasmaga 96.9 FM"
+          alt="Radio Yasmaga 96.90 FM Mhz"
           className="w-16 h-16 rounded-lg"
         />
         <p className="text-xs text-Gainsboro/70">
-          Radio 96.9 Yasmaga FM Ponorogo adalah salah satu stasiun radio FM yang
-          ada di wilayah kabupaten Ponorogo. Yasmaga 96.9 FM menjadi alternatif
+          Radio Yasmaga 96.90 FM Ponorogo adalah salah satu stasiun radio FM yang
+          ada di wilayah kabupaten Ponorogo. Yasmaga 96.90 FM menjadi alternatif
           pilihan radio yang memberi hiburan, informasi dan edukasi, sehingga
           radio ini memiliki banyak pendengar setia.
         </p>
@@ -31,7 +31,7 @@ const Schedule = () => {
 
       {/* Konten Jadwal Siaran */}
       <p className="capitalize font-bold text-lg text-white mb-4">
-        Jadwal Radio Yasmaga 96.9 FM
+        Jadwal Radio Yasmaga 96.90 FM Mhz
       </p>
 
       {/* Navigasi Hari */}
@@ -59,7 +59,7 @@ const Schedule = () => {
             <div className="bg-Gainsboro/5 text-white px-[4%] md:px-[1%] h-9 flex items-center rounded-t-md">
               {/* Sudut atas lancip, sudut bawah lancip */}
               <p>
-                {item.startTime} WIB - {item.endTime} WIB
+                {item.startTime} - {item.endTime} WIB
               </p>
             </div>
 
@@ -73,7 +73,7 @@ const Schedule = () => {
               />
               <div>
                 <p className="text-sm font-bold text-white">{item.title}</p>
-                <p className="text-xs text-Gainsboro">{selectedDay}</p>
+                <p className="text-xs text-Gainsboro/70">{selectedDay}</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ const Schedule = () => {
             className="w-24 h-auto md:w-32 mb-4" // Responsive width for logo + added margin bottom
           />
           <p className="text-xs text-Gainsboro/70">
-            © 2024 Radio Yasmaga 96.9 FM v1.1.0
+            © 2024 Radio Yasmaga 96.90 FM Mhz v1.1.0
           </p>
         </div>
       </footer>

@@ -14,9 +14,9 @@ const Header = () => {
         />
       </div>
       {/* Penyesuaian tampilan teks dan ikon di sebelah kanan */}
-      <div className="flex items-center text-white text-sm font-normal">
-        <Phone size={16} className="mr-2 text-white" />
-        <span>0811-3375-559</span>
+      <div className="flex items-center text-sm font-normal">
+        <Phone size={16} className="mr-2 text-yellow-500" />
+        <span className="text-yellow-500">0811-3375-559</span> {/* Mengubah warna teks menjadi kuning */}
       </div>
     </div>
   );
